@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
      return render_template("index.html")
-@app.route("/predict", methods=['POST'])
+@app.route("/predict", methods=['POST, GET'])
 def predict():
     n = request.form['Nitrogen']
     p = request.form['Phosphorus']
